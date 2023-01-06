@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Schema for the DB 1 available flights
 const schema = new mongoose.Schema({
     flightNo:{
-        type: String,
+        type: Number,
         required: true
     },
     trvl_btwn_cities:{

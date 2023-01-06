@@ -46,7 +46,7 @@ app.get('/bookFlights', async (req, res) => {
 })
 
 
-// for booking of the flight which will be stored in DB 2.
+// for booking of the flight which will be stored in DB 2
 app.post('/bookFlights', async (req, res) => {
   // to get the name and mobile no of the user from req.body ...... array destructure
   const { name, no, contactNo } = req.body;
@@ -56,7 +56,7 @@ app.post('/bookFlights', async (req, res) => {
 
   // to get the details of the flihgt fro DB 1.
   const bookingFlight = await Flights.findOne({ flightNo: no });
-  const { flightNo, trvl_btwn_cities, flight_timing, plane_category } = bookingFlight
+  const { flightNo, trvl_btwn_cities, flight_timing, plane_category } = bookingFlight;
   console.log(bookingFlight)
   try {
     if (bookingFlight) {
